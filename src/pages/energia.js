@@ -54,6 +54,50 @@ const Energia = () => {
               temp[INZSR] = temp[INZSR]+1
               temp[TOZ] = temp[TOZ]+1
               break;
+        // PYTANIE 3.
+        case "E2A0":
+          temp[INZSR] = temp[INZSR]+1
+          temp[BUDOWNICTWO] = temp[BUDOWNICTWO]+1
+          break;
+        case "E2A1":
+            temp[ENERGETYKA] = temp[ENERGETYKA]+1
+            break;
+        case "E2A2":
+            temp[TOZ] = temp[TOZ]+1
+            temp[INFA] = temp[INFA]+1
+            temp[AIR] = temp[AIR]+1
+            temp[MECHATRONIKA] = temp[MECHATRONIKA]+1
+            break;
+        // PYTANIE 4.
+        case "E3A0":
+          temp[ENERGETYKA] = temp[ENERGETYKA]+1
+          break;
+        case "E3A1":
+          temp[TOZ] = temp[TOZ]+1
+          temp[INZSR] = temp[INZSR]+1
+            break;
+        case "E3A2": 
+          temp[BUDOWNICTWO] = temp[BUDOWNICTWO]+1
+            temp[MECHATRONIKA] = temp[MECHATRONIKA]+1
+            break;
+        case "E3A3": 
+          temp[INFA] = temp[INFA]+1
+          temp[AIR] = temp[AIR]+1
+          break;
+        // PYTANIE 5.
+        case "E4A0":
+          temp[ENERGETYKA] = temp[ENERGETYKA]+1
+          temp[MECHATRONIKA] = temp[MECHATRONIKA]+
+          break;
+        case "E4A1":
+          temp[INZSR] = temp[INZSR]+1
+          temp[BUDOWNICTWO] = temp[BUDOWNICTWO]+1
+          temp[TOZ] = temp[TOZ]+1
+            break;
+        case "E4A2":
+            temp[INFA] = temp[INFA]+1
+            temp[AIR] = temp[AIR]+1
+            break;
         default:
           break;
       }

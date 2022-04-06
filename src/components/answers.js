@@ -14,18 +14,30 @@ const ContainerV = styled.div`
   flex-direction: column;
   justify-content: center;
 `
-const Buttons = styled.li`
+const Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+const Div = styled.div`
+  width:100%;
   display: flex;
   justify-content: center;
 `
 export default function pageStructure( props ) {
-    return (
+  const dodajPunkt=(e, id)=>{
+    props.wynik[0]
+ }
+
+      return (
         <div>
             <ContainerH>
                     <ContainerV>
                     <Buttons>
                       {props.answers.map((answer) =>
-                        <button onClick={()=>{navigate(`${answer.desc}`)}}>{answer.desc}</button>
+                        <Div>
+                          <button onClick={()=>{navigate(`${answer.desc}`)}}>{answer.desc}</button>
+                        </Div>
                       )}
                     </Buttons>
                     
