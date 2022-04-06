@@ -1,0 +1,11 @@
+$headline-font: "Staatliches", "Impact", serif;
+$main-font: "Spartan", "Segoe UI", "Roboto", sans-serif;
+
+
+body{
+    font-family: $main-font;
+    margin: 0px;
+    padding: 0px;
+    color: #707070;
+    background-color: white;
+}

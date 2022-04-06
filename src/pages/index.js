@@ -1,9 +1,11 @@
 import * as React from "react"
+import Layout from "../components/Layout.js";
 import PageStructure from "../components/pageStructure.js"
+import Questions from "../components/questions.js"
 
 // dane
 const question1 = " Pierwsze Pytanie warte zadania";
-const anwsers1 = [
+const answers = [
   {
     link: "./mojastrona/",
     desc: "Odpowiedz 1",
@@ -29,9 +31,11 @@ const anwsers1 = [
 // markup
 const IndexPage = () => {
   return (
-    <PageStructure question={question1} anwsers={anwsers1}>
-      
-    </PageStructure>
+    <Layout>
+      <Questions question={question1} anwsers={answers}>
+          
+      </Questions>
+    </Layout>
   )
 }
 
