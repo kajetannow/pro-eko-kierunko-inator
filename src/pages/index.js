@@ -1,31 +1,33 @@
 import * as React from "react"
 import Layout from "../components/Layout.js";
-import PageStructure from "../components/pageStructure.js"
 import Answers from "../components/answers.js"
-import { Link } from "gatsby";
 
 // dane
 //const question1 = " Pierwsze Pytanie warte zadania";
 const answers = [
   {
     link: "energia",
-    desc: "energia",
+    desc: "Energia",
   },
   {
-    link: "./mojastrona2/",
-    desc: "Odpowiedz 2",
+    link: "transport",
+    desc: "Transport",
   },
   {
-    link: "./mojastrona3/",
-    desc: "Odpowiedz 3",
+    link: "budownictwo",
+    desc: "Budownictwo",
   },
   {
-    link: "./mojastrona4/",
-    desc: "Odpowiedz 4",
+    link: "przemysl",
+    desc: "Przemysł",
   },
+ /* {
+    link: "uprawy",
+    desc: "Uprawy",
+  },*/
   {
-    link: "./mojastrona4/",
-    desc: "Odpowiedz 4",
+    link: "porzadek",
+    desc: "Porządek",
   },
 ]
 /*
@@ -39,8 +41,8 @@ const answers = [
 const IndexPage = () => {
   return (
     <Layout>
+      <p>Z pasją godną dr. Dundersztyca stworzyliśmy poradnik do wyboru pro-eko kierunku na Politechnice Poznańskiej</p>
       <h1 className="h-font">Jaki sektor wariacie?</h1>
-
       <Answers answers={answers}>
 
       </Answers>

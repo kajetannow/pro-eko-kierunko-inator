@@ -141,7 +141,7 @@ const Energia = () => {
             </div>
           </div>
         )}
-        <button onClick={e => calcResult(e, answers)}>POKAŻ WYNIK</button>
+        <button className='btn-show' onClick={e => calcResult(e, answers)}>POKAŻ WYNIK</button>
       </form>
       <div className={showForm ? "hidden" : ""}>
         <Result points={points}>

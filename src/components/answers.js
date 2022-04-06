@@ -34,9 +34,9 @@ export default function pageStructure( props ) {
             <ContainerH>
                     <ContainerV>
                     <Buttons>
-                      {props.answers.map((answer) =>
-                        <Div>
-                          <button onClick={()=>{navigate(`${answer.desc}`)}}>{answer.desc}</button>
+                      {props.answers.map((answer, id) =>
+                        <Div key={id}>
+                          <button onClick={()=>{navigate(`${answer.link}`)}}>{answer.desc}</button>
                         </Div>
                       )}
                     </Buttons>
