@@ -14,10 +14,9 @@ const ContainerV = styled.div`
   justify-content: center;
 `
 const Question = styled.h1`
-  border: 2px solid red;
-  border-radius: 6px;
-  padding: 30px;
   text-align: center;
+  text-transform: uppercase;
+  margin-top:10px;
 `
 
 export default function pageStructure( props ) {
@@ -31,7 +30,7 @@ export default function pageStructure( props ) {
                         </Answers>
                         { props.children }
                     </ContainerV>
-                </ContainerH>
+            </ContainerH>
         </div>
     )
 }

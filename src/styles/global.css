@@ -8,6 +8,7 @@ body {
 
 main {
   padding: 0 6.33vw;
+  padding-top: 20px;
 }
 
 h1, h3 {
@@ -40,12 +41,15 @@ h1, h3 {
 
 button, .btn {
   font-family: "Spartan", "Segoe UI", "Roboto", sans-serif;
+  font-size: 1.25em;
   background-color: inherit;
   color: #4c4c4c;
-  padding: 1.5vh 1.5vw;
-  margin: 1.5vh 1.5vw;
+  padding: 2vh 4vw;
+  margin: 2vh 2vw;
   border: 0.3em solid #4c4c4c;
-  border-radius: 3em;
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  min-width: 200px;
 }
 
 button:hover, .btn:hover {
