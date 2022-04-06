@@ -21,6 +21,9 @@ export default function Layout( props ) {
             <main>
                 { props.children }
             </main>
+            <footer>
+                <small>2022 &copy; PUT:eco</small>
+            </footer>
         </div>
     )
 }

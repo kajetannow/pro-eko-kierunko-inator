@@ -1,7 +1,38 @@
 $headline-font: "Staatliches", "Impact", cursive;
 $main-font: "Spartan", "Segoe UI", "Roboto", sans-serif;
 $gray: #333333;
-$white: #f0f0e0;
+$white: #f0f0ea;
+
+@keyframes fadeIn{
+from{
+    opacity: 0;
+}
+to{
+    opacity: 1;
+}
+}
+
+@keyframes fadeInDelay{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    }
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    }
+
 
 html{
     font-size: 16px;
@@ -13,20 +44,22 @@ body{
     margin: 0px;
     padding: 0px;
     color: $gray;
-    background-color: white;
+    background-color: $white;
 }
 
 nav{
     display: flex;
     //position: fixed;
-    background-color: #78d11e;
+    //background-color: #78d11e;
+    background-color: $white;
+    //background-color: #71E424;
     justify-content: space-between;
     padding: 1.5vh 6.33vw;
     margin-bottom: 5vh;
     h1.h-font{
         font-size: 2em;
     }
-    box-shadow: 2px 7px 10px $gray;
+    box-shadow: 2px 3px 11px rgba($gray, 0.5);
 }
 
 a{
@@ -38,7 +71,9 @@ a{
 }
 
 main{
+    animation: fadeIn 0.2s ease-in;
     padding: 0 6.33vw;
+    min-height: 80vh;
 }
 
 h1, h3{
@@ -86,21 +121,69 @@ h3.h-font{
 }
 
 .hidden{
+    opacity: 0;
     display: none;
+}
+
+.result-container{
+    //opacity: 1;
+    animation: fadeIn 0.3s ease-in;
+    h2{font-weight: 500;}
+    .btn{
+        margin: 10vh 16.67vw;
+        text-align: center;
+        animation: fadeInDelay 2.5s ease-in;
+    }
+}
+
+.winners{
+    margin: 6.33vh 0;
+    animation: fadeInDelay 1.5s ease-in;
+}
+
+.all-options{
+    //opacity: 1;
+    animation: fadeInDelay 2.5s ease-in;
 }
 
 button, .btn{
     font-family: $main-font;
     background-color: inherit;
     color: $gray;
-    padding: 1.5vh 1.5vw;
+    padding: 1.5vh 1em;
     margin: 1.5vh 1.5vw;
     border: 0.3em solid $gray;
     border-radius: 3em;
+    font-weight: 600;
+    font-size: 1.1em;
     &:hover{
         opacity: 0.7;
+        color: $white;
+        background-color: $gray;
     }
 }
 .btn{
     display: block;
+}
+
+.btn-show{
+margin: 5vh 32vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30vh;
+}
+
+footer{
+    text-align: center;
+}
+
+@media (max-width: 460px) {
+    nav{
+        flex-direction: column;
+        h1.h-font{
+            margin: 0;
+        }
+    }
 }
