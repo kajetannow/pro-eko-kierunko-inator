@@ -11,14 +11,25 @@ export default function Result( props ) {
     sortable.sort(function(a, b) {
         return b[1] - a[1];
     });
-    console.log(sortable)
+
+    let winners = []
+        if(sortable && sortable[1]){
+        let maxPoints = sortable[0][1]
+        winners.push(sortable[0][0])
+        let i=1
+        while(i < sortable.length){
+            if(sortable && sortable[i] && sortable[i][1]==maxPoints)
+                winners.push(sortable[i][0])
+            i++;
+        }
+    }
     return (
         <div>
-            <h2>Wygrany kierunek to...</h2>
+            <h2><span className="h-font">PRO-EKO-KIERUNKO-INATOR</span> zadecydował. <br /> Najbardziej pasuje do Ciebie:</h2>
             {sortable &&
                 <>
-                <h1 className="h-font">{sortable[0][0]}</h1>
-                <h2>Pozostałe kierunki to:</h2>
+                <h1 className="h-font">{winners.join(", ")}</h1>
+                <h2>Wszystkie powiązane propozycje:</h2>
                 {sortable.map((el, i)=><h3 key={i} className="h-font">{el[0]}</h3>)}
                 </>
             }

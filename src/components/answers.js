@@ -26,7 +26,7 @@ const Div = styled.div`
 `
 export default function pageStructure( props ) {
   const dodajPunkt=(e, id)=>{
-    props.wynik[0]
+    //props.wynik[0]
  }
 
       return (

@@ -87,7 +87,7 @@ const Energia = () => {
         // PYTANIE 5.
         case "E4A0":
           temp[ENERGETYKA] = temp[ENERGETYKA]+1
-          temp[MECHATRONIKA] = temp[MECHATRONIKA]+
+          temp[MECHATRONIKA] = temp[MECHATRONIKA]+1
           break;
         case "E4A1":
           temp[INZSR] = temp[INZSR]+1
