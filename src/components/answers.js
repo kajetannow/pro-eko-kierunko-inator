@@ -20,11 +20,11 @@ const Buttons = styled.li`
 `
 export default function pageStructure( props ) {
     return (
-        <div className={questionsStyle.background}>
+        <div>
             <ContainerH>
                     <ContainerV>
                     <Buttons>
-                      {props.anwsers.map((answer) =>
+                      {props.answers.map((answer) =>
                         <button onClick={()=>{navigate(`${answer.desc}`)}}>{answer.desc}</button>
                       )}
                     </Buttons>

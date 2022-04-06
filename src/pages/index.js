@@ -1,14 +1,14 @@
 import * as React from "react"
 import Layout from "../components/Layout.js";
 import PageStructure from "../components/pageStructure.js"
-import Questions from "../components/questions.js"
+import Answers from "../components/answers.js"
 
 // dane
-const question1 = " Pierwsze Pytanie warte zadania";
+//const question1 = " Pierwsze Pytanie warte zadania";
 const answers = [
   {
-    link: "./mojastrona/",
-    desc: "Odpowiedz 1",
+    link: "energia",
+    desc: "energia",
   },
   {
     link: "./mojastrona2/",
@@ -32,9 +32,10 @@ const answers = [
 const IndexPage = () => {
   return (
     <Layout>
-      <Questions question={question1} anwsers={answers}>
-          
-      </Questions>
+      <h1 className="h-font">Jaki sektor wariacie?</h1>
+      <Answers answers={answers}>
+
+      </Answers>
     </Layout>
   )
 }

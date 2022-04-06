@@ -9,7 +9,9 @@ export default function Layout( props ) {
             <Nav>
                 Nawigacja
             </Nav> 
+            <main>
                 { props.children }
+            </main>
         </div>
     )
 }

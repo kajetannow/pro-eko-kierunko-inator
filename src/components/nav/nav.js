@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { Component } from 'react';
 import styled from "styled-components"
 
@@ -21,7 +22,7 @@ class nav extends Component {
             <nav className={navStyle.background}>
                 <ContainerH>
                     <ContainerV>
-                        <h1 className={navStyle.text}>PUT:ECO</h1>
+                        <h1 className={navStyle.text}><Link to="/">PUT:ECO</Link></h1>
                         <h3 className={navStyle.text}>PRO-ECO KIERUNKO-INATOR</h3>
                     </ContainerV>
                 </ContainerH>

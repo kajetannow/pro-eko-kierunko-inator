@@ -1,31 +1,77 @@
 import React, { useState } from 'react';
 import Layout from "../components/Layout.js"
+import Result from '../components/Result.js';
+import { ENERGETYKA, AIR, BUDOWNICTWO, INFA, MECHATRONIKA, INZSR, TOZ } from '../utils/list.js';
+import { ENERGY_QUESTIONS } from '../utils/questions.js';
 
-// dane
 
-
-// markup
 const Energia = () => {
+  const [showForm, setShowForm] = useState(true)
   const [answers, setAnswers] = useState([])
+  const [points, setPoints] = useState({
+    [AIR]: 0,
+    [BUDOWNICTWO]: 0,
+    [INFA]: 0,
+    [MECHATRONIKA]: 0,
+    [INZSR]: 0,
+    [TOZ]: 0,
+    [ENERGETYKA]: 0
+  })
 
-  const questions = [
-    {
-      q: "Pytanko",
-      ans: [
-        "Odpowiedz 1",
-        "Odpowiedz 2",
-        "Odpowiedz 3",
-      ]
-    },
-    {
-      q: "Pytanko2",
-      ans: [
-        "Odpowiedz 1",
-        "Odpowiedz 2",
-        "Odpowiedz 3",
-      ]
-    }
-  ]
+  const assignPoints = (arr, code) => {
+    console.log(code)
+    let temp = arr
+      switch (code) {
+        // PYTANIE 1.
+        case "E0A0":
+          temp[INFA] = temp[INFA]+1
+          break;
+        case "E0A1":
+            temp[AIR] = temp[AIR]+1
+            temp[MECHATRONIKA] = temp[MECHATRONIKA]+1
+            break;
+        case "E0A2":
+            temp[ENERGETYKA] = temp[ENERGETYKA]+1
+            break;
+        case "E0A3":
+              temp[BUDOWNICTWO] = temp[BUDOWNICTWO]+1
+              temp[INZSR] = temp[INZSR]+1
+              temp[TOZ] = temp[TOZ]+1
+              break;
+        // PYTANIE 2.
+        case "E1A0":
+          temp[INFA] = temp[INFA]+1
+          break;
+        case "E1A1":
+            temp[AIR] = temp[AIR]+1
+            temp[MECHATRONIKA] = temp[MECHATRONIKA]+1
+            break;
+        case "E1A2":
+            temp[ENERGETYKA] = temp[ENERGETYKA]+1
+            temp[BUDOWNICTWO] = temp[BUDOWNICTWO]+1
+            break;
+        case "E1A3":
+              temp[INZSR] = temp[INZSR]+1
+              temp[TOZ] = temp[TOZ]+1
+              break;
+        default:
+          break;
+      }
+      return temp;
+  }
+
+  const calcResult = (e, finalAnswers) => {
+    e.preventDefault()
+    let temp = {}
+      for(let i=0; i<finalAnswers.length; i++) {
+        temp = assignPoints(points, finalAnswers[i])
+      }
+    setPoints(temp)
+    console.log(temp)
+    setShowForm(false)
+  }
+
+  const questions = ENERGY_QUESTIONS
 
   const handleChange=(e, id)=>{
     const temp = answers
@@ -36,21 +82,29 @@ const Energia = () => {
   return (
     <Layout>
       <h1>Energia</h1>
-      <form>
+      <form className={showForm ? "" : "hidden"}>
           {questions.map((el, elId)=>
-          <div key={'question-'+elId}>
+          <div key={'question-'+elId} className="question-wrapper">
             <h2>{el.q}</h2>
-            {el.ans.map((a, aId)=>
-            <div key={'question-'+elId+'-a-'+aId}>
-              <input type="radio" value={`E${elId}A${aId}`} id={`E${elId}A${aId}`}
-              onChange={e => handleChange(e, elId)} name={`E${elId}`} />
-              <label htmlFor={`E${elId}A${aId}`}>{a}</label>
-            </div>)
-            }
-            
+            <div className="answer-wrapper">
+              {el.ans.map((a, aId)=>
+                <div key={'question-'+elId+'-a-'+aId} className="input-wrapper">
+                  <input type="radio" value={`E${elId}A${aId}`} id={`E${elId}A${aId}`}
+                  onChange={e => handleChange(e, elId)} name={`E${elId}`} />
+                  <label htmlFor={`E${elId}A${aId}`}>{a}</label>
+                </div>)
+              }
+            </div>
           </div>
         )}
+        <button onClick={e => calcResult(e, answers)}>POKAŻ WYNIK</button>
       </form>
+      <div className={showForm ? "hidden" : ""}>
+        <Result points={points}>
+
+        </Result>
+      </div>
+    
     </Layout>
   )
 }

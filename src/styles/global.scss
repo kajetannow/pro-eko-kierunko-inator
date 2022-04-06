@@ -1,11 +1,56 @@
-$headline-font: "Staatliches", "Impact", serif;
+$headline-font: "Staatliches", "Impact", cursive;
 $main-font: "Spartan", "Segoe UI", "Roboto", sans-serif;
-
+$gray: #4c4c4c;
 
 body{
     font-family: $main-font;
     margin: 0px;
     padding: 0px;
-    color: #707070;
+    color: $gray;
     background-color: white;
+}
+
+main{
+    padding: 0 6.33vw;
+}
+
+h1, h3{
+    text-align: center;
+}
+
+.h-font{
+    font-family: $headline-font;
+}
+
+.question-wrapper{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.answer-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.input-wrapper{
+    margin: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+button, .btn{
+    font-family: $main-font;
+    background-color: inherit;
+    color: $gray;
+    padding: 1.5vh 1.5vw;
+    margin: 1.5vh 1.5vw;
+    border: 0.3em solid $gray;
+    border-radius: 3em;
+    &:hover{
+        opacity: 0.7;
+    }
 }
