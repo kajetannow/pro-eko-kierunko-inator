@@ -9,7 +9,7 @@ export const ENERGY_QUESTIONS = [
       ]
     },
     {
-      q: "Za 10 lat dzień w mojej pracy będę:",
+      q: "Za 10 lat w mojej pracy będę:",
       ans: [
         "Z kawusią/herbatką przeczesywać linijki kodu",
         "Tworzyć maszyny",
@@ -18,7 +18,7 @@ export const ENERGY_QUESTIONS = [
       ]
     },
     {
-      q: "Jaki rodzaj energii Cię najbardziej interesuje:",
+      q: "Jaki rodzaj energii Cię najbardziej interesuje?",
       ans: [
         "Cieplna",
         "Elektryczna",
@@ -35,7 +35,7 @@ export const ENERGY_QUESTIONS = [
       ]
     },
     {
-      q: "Oglądając YouTube’a o 3 w nocy wybiorę:",
+      q: "Oglądając YouTube’a o 3 w nocy wybierzesz:",
       ans: [
         "ElectroBOOMa rażącego się prądem",
         "tworzenie narzędzi i budynków przez Primitive Technology",
@@ -213,11 +213,46 @@ export const INDUSTRY_QUESTIONS = [
 
 export const ORDER_QUESTIONS = [
   {
-    q: "",
+    q: "Z jaką kawą zamierzasz chodzić na uczelnię?",
     ans: [
-      "",
-      "",
-      ""
+      "moją ulubioną, starannie zaparzoną w termosie",
+      "a, kupię jakąś w automacie",
+      "po drodze wstąpie do kawiarni albo wezmę energetyka (lub dwa)",
+    ]
+  },
+  {
+    q: "Jak myślisz o Wielkiej Pacyficznej Plamie Śmieci to chcesz najpierw:",
+    ans: [
+      "Ograniczyć produkcję śmieci",
+      "Stworzyć maszyny do ich zbierania",
+      " Lepiej zarządzać istniejącymi śmieciami",
+      "Stworzyć biodegradowalny plastik"
+    ]
+  },
+  {
+    q: "Twój plan na naprawę Polski zawiera…",
+    ans: [
+      "Zrobienie wszystkiego na cyfrowo",
+      "Zakazanie plastiku",
+      "Śmieciarka dla każdej gminy z największym odsetkiem recyklingu",
+      "Stworzenie przemysłu rozkładania śmieci"
+    ]
+  },
+  {
+    q: "Jak widzę plastikową butelkę na ziemi to myślisz…",
+    ans: [
+      "co można z niej zrobić",
+      "jakie chemikalia byłyby w stanie ją rozłożyć",
+      " jak zajmować się śmieciami w miastach",
+      "nad stworzeniem maszyny do zbierania śmieci"
+    ]
+  },
+  {
+    q: "Co robisz ze swoimi domowymi śmieciami?",
+    ans: [
+      "starannie je układam",
+      "recykling to ściema, ale i tak sortuję",
+      "maszyny je za mnie sortują"
     ]
   },
 ]

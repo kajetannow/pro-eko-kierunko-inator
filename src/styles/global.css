@@ -74,7 +74,7 @@ h1, h3 {
 }
 
 .h-font {
-  font-family: "Staatliches", "Impact", cursive;
+  font-family: "Staatliches", "Impact", serif;
 }
 
 h1.h-font {
@@ -183,5 +183,11 @@ footer {
   }
   nav h1.h-font {
     margin: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .btn-show {
+    margin: 5vh 6.33vw;
   }
 }

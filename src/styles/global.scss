@@ -1,4 +1,4 @@
-$headline-font: "Staatliches", "Impact", cursive;
+$headline-font: "Staatliches", "Impact", serif;
 $main-font: "Spartan", "Segoe UI", "Roboto", sans-serif;
 $gray: #333333;
 $white: #f0f0ea;
@@ -167,7 +167,7 @@ button, .btn{
 }
 
 .btn-show{
-margin: 5vh 32vw;
+    margin: 5vh 32vw;
 }
 form{
     display: flex;
@@ -185,5 +185,11 @@ footer{
         h1.h-font{
             margin: 0;
         }
+    }
+}
+
+@media (max-width: 660px) {
+    .btn-show{
+        margin: 5vh 6.33vw;
     }
 }
